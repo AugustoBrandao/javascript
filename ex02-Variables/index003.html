@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Basic Alerts</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-weight: bolder;
+            background-color: #612F74;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- JavaScript-->
+    <script>
+        //Pegar o nome
+        //Transformar e retornar em maiúsculo
+        //Digitar salário
+        //Retornar em formato de real
+        //Converter e retornar em dólar e euro
+        var nome = window.prompt('Digite o seu nome: ').toUpperCase()
+        var salario = Number.parseInt(window.prompt('Digite o Salário: '))
+
+        var salarioReal = salario.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})
+        var salarioEuro = salario / 5.21
+        var salarioDolar = salario / 4.87
+
+        document.write(`Olá ${nome} <br>`)
+        document.write(`Salário ${salarioReal} <br>`)
+        document.write(`Europa: ${salarioEuro.toLocaleString('pt-BR', {style:'currency', currency: 'EUR'})} <br>`)
+        document.write(`EUA: ${salarioDolar.toLocaleString('pt-BR', {style:'currency', currency: 'USD'}).replace('.',',')} <br>`)
+    </script>
+</body>
+</html>
