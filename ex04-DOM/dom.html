@@ -18,7 +18,7 @@
     <h1>Iniciando os Estudos com DOM</h1>
     <p>ver resultado</p>
     <p>Apredendo a usar <strong>DOM</strong> em JavaScript</p>
-    <div>clique em mim</div>
+    <div id="msg">clique em mim</div>
 
     <script>
         /* DOM - Document Object Model */
@@ -43,6 +43,14 @@
         var corpo = window.document.getElementsByTagName('p')[1]
         window.alert(corpo.innerText)
         
+        /* //Selecionar por ID
+        var dive = window.document.getElementById('msg')
+        dive.style.background ='green'          //mudar a cor de fundo da div
+        dive.innerText = 'Estou aguardando...' //mudar o texto */
+
+        var dive = window.document.querySelector('div#msg')
+        dive.style.background ='green'  
+        dive.innerText = 'Estou aguardando...'
     </script>
 </body>
 </html>
