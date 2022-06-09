@@ -1,0 +1,1 @@
+//São Sempre funções anônimas

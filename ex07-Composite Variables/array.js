@@ -1,7 +1,7 @@
 //array.length()-> tamanho do array nome
 //array.push(7) -> colocar o 7 na última casa
 //array.sort() -> colocar os elementos em ordem crescente
-//array.indexOf(7) -> pesquisar o elememto 7 dentro do array
+//array.indexOf(7) -> pesquisar o elememto 7 dentro do array  
 
 var nome = []
 var idade = []
