@@ -17,3 +17,7 @@ if(agora.getMinutes() < 10){
     minutes.innerHTML = agora.getMinutes()
 }
 
+//Reload the page every one minute
+window.setTimeout( function() {
+    window.location.reload();
+  }, 60000);
