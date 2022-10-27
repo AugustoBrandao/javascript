@@ -6,7 +6,7 @@ console.log(soma(2,5))
 
 
 let v = function(x){ return x*2 }
-console.log(v())
+console.log(v(2))
 
 //fatorial
 function fatorial(n){
