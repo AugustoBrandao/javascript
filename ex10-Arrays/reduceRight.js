@@ -14,14 +14,4 @@ const reduceRightAlphabet = alphabet.reduceRight((acc, item)=>{
     return acc + item;
 }, 0);
 
-const asterisco = ['*','*','*','*','*','*'];
 
-const value = asterisco.reduce((acc, item) => {
-    if(acc == '*'){
-        console.log(acc);
-        return acc+item;
-    }else{
-        console.log(acc);
-        return acc + item;
-    }    
-}, '*');

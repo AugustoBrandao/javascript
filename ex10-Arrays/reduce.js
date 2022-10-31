@@ -10,9 +10,9 @@ const numbers = [1,2,3,4,5,6,7,8,9,10];
 */
 
 //2 parametro: qual é o valor inicial dessa nova estrutura de dados -> iniciando do 0
-const soma = numbers.reduce((valorAnterior, item)=>{
-    console.log(valorAnterior+ '/'+ item);
-    return valorAnterior + item;
+const soma = numbers.reduce((acc, item)=>{
+    console.log(acc+ '/'+ item);
+    return acc + item;
 }, 0);
 
 //Somar quantidade de lançamentos de foguete de todos os países
