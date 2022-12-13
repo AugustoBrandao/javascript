@@ -47,16 +47,18 @@ var obj = "";
 for(let chave in cliente){
 
     if(typeof cliente[chave] === "object"){
+       
         cliente[chave].forEach(item => {
-            obj += `| 
-            ${String(JSON.stringify(item))} |
-            `
+            obj += ` 
+            ${String(JSON.stringify(item))} `
         });
+
     }else{
-        r += `| ${chave} : ${cliente[chave]} |`
+        r += `
+         ${chave} : ${cliente[chave]} `
     }
 }
 
 console.log(r);
-console.log(obj)
+console.log(obj);
 
