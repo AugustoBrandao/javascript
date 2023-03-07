@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+<body>
+    <div id="div"><p id="paragrafo">teste de proeficiência em <strong>DOM</strong></p></div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        //PEGANDO OS ELEMENTOS POR ID - pode ser usada em apenas um elemento
+        let divInteira = document.getElementById('div'); //Tag div com o parágrafo
+        let paragrafo = document.getElementById('paragrafo'); //Tag de parágrafo
+        let textoComTags = document.getElementById('paragrafo').innerHTML; //Conteúdo do parágrafo com as tags no meio
+        let textoSemTags = document.getElementById('paragrafo').innerText;//Conteúdo do parágrafo sem as tags no meio
+
+        //Modificar o texto do elemento que possui o id paragrafo
+        document.getElementById('paragrafo').innerText = 'teste de proeficiência em HTML CSS e <strong>JavaScript</strong>';
+    </script>
+</body>
+</html>

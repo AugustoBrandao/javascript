@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName/title>
+</head>
+<body>
+    <p class="lenda">Ayrton Senna</p>
+    <p class="piloto-f1-atual">Lewis Hamilton</p>
+    <p class="piloto-f1-atual">Sebastian Vettel</p>
+    <p class="piloto-f1-atual">Lando Norris</p>
+
+    <div class="piloto-f1-atual">George Russel</div>
+    <div class="piloto-f1-atual">Daniel Ricardo</div>
+
+    <span class="piloto-f1-atual">Kevin Magnussen</span>
+
+    <script>
+        /*
+            São retornados uma LISTA DE ELEMENTOS, e nunca apenas um elemento
+        */
+
+        let span = document.getElementsByTagName('span'); //retorna uma lista de apenas um item [0]
+        span[0].innerText = 'Augusto Brandão';
+
+        let pilotosF1Atual = document.getElementsByTagName('p');
+        for(let index = 0; index < pilotosF1Atual.length; index++){
+            pilotosF1Atual[index].innerText = 'teste';
+        }
+
+    </script>
+</body>
+</html>

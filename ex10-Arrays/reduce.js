@@ -15,6 +15,8 @@ const soma = numbers.reduce((acc, item)=>{
     return acc + item;
 }, 0);
 
+console.log(soma);
+
 //Somar quantidade de lançamentos de foguete de todos os países
 
 //Array de objetos
@@ -28,4 +30,4 @@ const totalLancamentos = lancamento.reduce((elementoAnterior, item)=>{
     return elementoAnterior + item.launches;
 }, 0);
 
-console.log(totalLancamentos);
+//console.log(totalLancamentos);

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+<body>
+    <p class="lenda">Ayrton Senna</p>
+    <p class="piloto-f1-atual">Lewis Hamilton</p>
+    <p class="piloto-f1-atual">Sebastian Vettel</p>
+    <p class="piloto-f1-atual">Lando Norris</p>
+
+    <script>
+         //PEGANDO OS ELEMENTOS PELO NOME DA CLASSE - que podem ser usada em mais de um elemento
+        /*
+            Quando digitamos document.getElementById('paragrafo'); estamos selecionando apenas UM ELEMENTO
+            O getElementById retornará uma COLLECTION, que basicamente é UM ARRAY COM UM ÚNICO ITEM [0]
+            Ou seja, é por isso que conseguimos usar o .innerText, pois se trata de apenas um elemento no índice [0]
+
+            Quando digitamos document.getElementsByClassName('piloto-f1-atual'); estamos selecionando VÁRIOS ELEMENTOS DE UMA VEZ
+            O getElementsByClassName retornará uma COLLECTION, que basicamente é UM ARRAY COM VÁRIOS ITENS
+            Ou seja, para conseguimos usar o .innerText, temos que colocar o índice [i] que iremos especificamente alterar o item
+            Para alterar múltiplos elementos de uma vez com o getElementsByClassName, usamos 
+        */
+        document.getElementsByClassName('piloto-f1-atual')[0].innerText = 'teste'; //um elemento específico
+
+        let pilotosF1Atual = document.getElementsByClassName('piloto-f1-atual'); //retornará uma COLLECTION, ou seja, um array com todos os elementos
+        for(let index = 0; index < pilotosF1Atual.length; index++){
+            pilotosF1Atual[index].innerText = 'Piloto Atual de Fórmula 1';
+        }
+    </script>
+</body>
+</html>

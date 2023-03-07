@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+</head>
+<body>
+    <div class="pilotos-com-titulo">
+        <p class="lenda">Ayrton Senna</p>
+        <p class="piloto-f1-atual">Lewis Hamilton</p>
+        <p class="piloto-f1-atual">Sebastian Vettel</p>
+        <p class="piloto-f1-atual">Lando Norris</p>
+    </div>
+        
+    <div class="pilotos-sem-titulo">
+        <div class="piloto-f1-atual">George Russel</div>
+        <div class="piloto-f1-atual">Daniel Ricardo</div>
+        <span class="piloto-f1-atual">Kevin Magnussen</span>
+        <p class="piloto-f1-atual">Lando Norris</p>
+    </div>
+
+    <p id="Dona"> Liberty Media </p>
+
+    <script>
+        /*
+            Retorna apenas um elemento (o primeiro)
+            Trabalha com Seletores CSS
+            Mais flexível que o getElementBy...
+            É preciso especificar se é uma classe ou um id
+        */
+        document.querySelector('#Dona');                                //<p id="Dona"> Liberty Media </p>
+        document.querySelector('p')                                     //<p class="lenda">Ayrton Senna</p>
+        document.querySelector('.pilotos-sem-titulo p');                //<p class="piloto-f1-atual">Lando Norris</p>
+        document.querySelector('.pilotos-sem-titulo .piloto-f1-atual'); //<div class="piloto-f1-atual">George Russel</div>
+    </script>
+</body>
+</html>

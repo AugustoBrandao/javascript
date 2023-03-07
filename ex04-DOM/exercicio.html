@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador do Tempo</title>
+    <style>
+        * {
+        margin: 0;
+        }
+
+        #container {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        }
+
+        #header-container {
+        color: white;
+        padding: 20px;
+        }
+
+        .emergency-tasks {
+        display: inline-block;
+        height: 400px;
+        margin: 56px 0;
+        width: 400px;
+        }
+
+        .emergency-tasks div {
+        height: 198px;
+        }
+        .emergency-tasks h3 {
+        color: white;
+        margin-top: 10px;
+        padding: 10px;
+        }
+
+        .no-emergency-tasks {
+        display: inline-block;
+        height: 400px;
+        width: 400px;
+        }
+
+        .no-emergency-tasks div {
+        height: 198px;
+        }
+
+        .no-emergency-tasks h3 {
+        color: white;
+        margin-top: 10px;
+        padding: 10px;
+        }
+
+        #footer-container {
+        color: white;
+        font-weight: 700;
+        padding: 15px;
+        text-align: center;
+        }
+    </style>
+  </head>
+  <body id="container">
+    <header id="header-container">
+      <h1>Administrador do Tempo da Trybe</h1>
+    </header>
+
+    <section class="emergency-tasks">
+      <div>
+        <h3>Urgente e Importante</h3>
+      </div>
+      <div>
+        <h3>Urgente e Não-Importante</h3>
+      </div>
+    </section>
+
+    <section class="no-emergency-tasks">
+      <div>
+        <h3>Não-Urgente e Importante</h3>
+      </div>
+      <div>
+        <h3>Não-Urgente e Não-Importante</h3>
+      </div>
+    </section>
+
+    <footer id="footer-container">
+      <div>&copy; Trybe</div>
+    </footer>
+
+    <script>
+        document.body.style.backgroundColor = '#f3f3f3';
+
+        let header = document.getElementById('header-container');
+        header.style.backgroundColor = 'green';
+
+        let emergencyTasks = document.getElementsByClassName('emergency-tasks')[0]
+        emergencyTasks.style.backgroundColor = '#ff9e84';
+
+        let divsInsideClassEmergency = document.querySelectorAll('.emergency-tasks div h3');
+        for (let index = 0; index < divsInsideClassEmergency.length; index ++){
+            divsInsideClassEmergency[index].style.backgroundColor = 'purple';
+        }
+
+        let noEmergencyTasks = document.getElementsByClassName('no-emergency-tasks')[0]
+        noEmergencyTasks.style.backgroundColor = 'yellow';
+
+        let divsInsideClassNoEmergency = document.querySelectorAll('.no-emergency-tasks div h3');
+        for (let index = 0; index < divsInsideClassNoEmergency.length; index ++){
+            divsInsideClassNoEmergency[index].style.backgroundColor = 'black';
+        }
+
+        let footer = document.getElementsByTagName('footer');
+        footer[0].style.backgroundColor = 'green';
+    </script>
+  </body>
+</html>
