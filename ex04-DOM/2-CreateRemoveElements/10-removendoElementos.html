@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="ingredients-section">
+        <h2>Ingredientes</h2>
+        <ul class="ingredients-list"></ul> <!--Adicionar ingredientItem aqui -->
+    </section>
+</body>
+<script>
+    /*
+        REMOVER UM ELEMENTO
+        elementoPai.removeChild(elementoFilho);
+    */
+
+   let ingredientItem = [
+    'Arroz',
+    'Feijão',
+    'Batata Frita',
+    'Salada',
+    'Tomate'
+   ];
+   
+   // Capturando a classe ingredients-list
+   let ingredientList = document.querySelector('.ingredients-list');
+
+    // Percorrendo o array ingredientItem e adicionando <li> no ingredientList
+    for(let i = 0; i < ingredientItem.length; i += 1){
+        let item = ingredientItem[i];
+
+        let ingredientListItem = document.createElement('li'); // createElement()
+        ingredientItem.className = 'ingredients-list-item';
+        ingredientListItem.innerText = item;
+
+        ingredientList.appendChild(ingredientListItem);
+    }
+
+    //Remover um dos elementos da receita - feijão
+    let elementoPai = ingredientList;
+    let remover = elementoPai.firstElementChild.nextElementSibling;
+    elementoPai.removeChild(remover);
+
+</script>
+</html>
