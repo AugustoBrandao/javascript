@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Má Prática-->
+    <button onclick="cliqueAqui()">Clique Aqui!</button>
+
+    <!--Boa Prática-->
+    <p id="clicar">Parágrafo para ser clicado!</p>
+    <button id="mouse-over-leave"> OK </button>
+</body>
+<script>
+
+    // Event Listener - Página acaba de ser carregada
+    window.onload = jsCarregado;
+    function jsCarregado(){
+        alert('Página carregada com sucesso!')
+    }
+
+    //Eventos causados pela ação do usuário
+    function cliqueAqui(){
+        window.alert('Você clicou no botão!');
+    }
+
+    // addEventListener(tipoEvento, função); -> dois parâmteros
+    // 1- Evento que esperamos escutar (onclick, change, mouseover)
+    // 2- A função criada por você que irá ser executada, ela pode receber um parâmetro de evento
+    // Código JavaScript somente na parte JavaScript (boa prática)
+    // click, change, scroll, dblclick, keydown, mouseleave, mouseover
+    let clickP = document.getElementById('clicar');
+    clickP.addEventListener('click', recebeClick);
+    clickP.addEventListener('mouseover', mouseEmCima);
+
+    function recebeClick(eventoDeOrigem) {  // eventoDeOrigem -> Objeto evento
+        console.log(eventoDeOrigem.target); // Target: o elemento que originou esse mesmo evento (tag p)
+        console.log(eventoDeOrigem.type);    // Type: o tipo de evento que originou o click - Mouse, Keyboard, Screen...
+    }
+
+    //Exemplo 2 - Mouse over, mouse leave
+    let mouseOverLeaveButton = document.getElementById('mouse-over-leave');
+
+    mouseOverLeaveButton.addEventListener('mouseover', mouseEmCima); //Mouse over
+    mouseOverLeaveButton.addEventListener('mouseleave', mouseSaiuDoElemento);//Mouse leave
+
+    function mouseEmCima(){
+        console.log('Mouse passou por cima');
+    }
+
+    function mouseSaiuDoElemento() {
+        console.log('Mouse saiu do elemento')
+    }
+</script>
+</html>
