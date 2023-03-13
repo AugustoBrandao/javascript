@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+        LocalStorage: Salva os dados sem data de expiração, não são removidos quando o browser for fechado
+        - Os dados são salvos no formato chave-valor
+    */
+    localStorage.setItem('nome', 'Augusto'); // salva uma entrada com a key = 'nome' e value = 'Augusto'
+    localStorage.setItem('sobrenome', 'Brandão');
+    console.log(localStorage.getItem('nome')); // retorna o valor 'Augusto'
+    console.log(localStorage.length); // possui duas entradas, então o retorno é o valor: 2
+    localStorage.removeItem('sobrenome'); // remove a entrada referente a key = 'sobrenome'
+    localStorage.clear(); // limpa todas as entradas salvas em localStorage
+
+    // Tanto o localStorage quanto o sessionStorage armazenam dados no formato chave e valor e os valores salvos serão sempre no formato string
+</script>
+</html>
