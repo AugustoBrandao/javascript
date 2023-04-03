@@ -1,31 +1,19 @@
-//Foreach(() => {return}) - Para cada item, executamos uma ação
+//Foreach(() => {return}) - Para cada item, executamos uma ação, sem retorno nenhum
+//Por exemplo, o forEach executa uma determinada ação para cada item do array e não retorna nada.
 
-const numbers = [1,2,3,4,5,6,7,8,9,10];
+//ARRAY
+const emailListInData = [
+    'roberta@email.com',
+    'paulo@email.com',
+    'anaroberta@email.com',
+    'fabiano@email.com',
+  ];
 
-//primeiro parâmetro: item
-numbers.forEach(item => {
-    if(item % 2 == 0){
-        console.log(`${item} : PAR`)
-    }else{
-        console.log(`${item} : ÍMPAR`);
-    }
-});
+let exibirListaEmail = (email) => {
+    console.log(`O email ${email} está cadastrado em nosso banco de dados!`);
+}
 
-//Segundo parâmetro Index do item atual
-numbers.forEach((item, index) => {
-    if(item % 2 == 0){
-        console.log(`${item} : PAR - INDEX ${index}`)
-    }else{
-        console.log(`${item} : ÍMPAR - INDEX ${index}`);
-    }
-});
-
-//Terceiro parâmetro: Array que está sendo interado
-numbers.forEach((item, index, array) => {
-    if(item % 2 == 0){
-        console.log(`${item} : PAR - INDEX ${index}`)
-    }else{
-        console.log(`${item} : ÍMPAR - INDEX ${index}`);
-    }
-    console.log(`ARRAY ${array}`);
+emailListInData.forEach((elemento, index, array) => {
+    exibirListaEmail(elemento);
+    console.log(`Você foi o email número ${index} a ser cadastrado num total de ${array.length} emails\n`);
 });
