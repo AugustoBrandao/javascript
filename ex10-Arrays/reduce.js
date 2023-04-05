@@ -1,33 +1,23 @@
 //reduce() - reduzir meu array há algo
 //Pegar um array e criar uma nova estrutura de dados com base nele
-const numbers = [1,2,3,4,5,6,7,8,9,10];
+// Diferente das outras HOFs, o reduce recebe dois parâmetros: o primeiro é uma callback, e o segundo parâmetro é um valor inicial (que é opcional).
 
-//SOMAR TODOS OS ITENS DO ARRAY NUMBERS
+const array = [1,2,3,4,5,6,7,8,9,10];
+array.reduce(callback, valorInicial); // estrutura inicial do reduce
 
-/* 1 parametro = função que recebe duas informações:
-                    * objeto que estou criando (accumulator - acc)
-                    * e cada item do array (item)
+// O valorInicial é o valor da primeira iteração e, em geral, ao realizar somas, esse valor é 0.
+/*
+    Já a callback é a função que vai passar por cada um dos itens do array, e ela pode receber até 4 parâmetros, sendo eles:
+        1- Acumulador (acc): que é o valor que vai ser acumulado a cada iteração;
+        2- Valor atual (curr): que é o valor atual do item, a ser adicionado no acumulador;
+        3- Index atual: que é o index do item que está sendo iterado naquele momento;
+        4- Array: que é o array original.
 */
 
-//2 parametro: qual é o valor inicial dessa nova estrutura de dados -> iniciando do 0
-const soma = numbers.reduce((acc, item)=>{
-    console.log(acc+ '/'+ item);
-    return acc + item;
-}, 0);
+array.reduce((acumulador, valorAtual, indexAtual, array) => { "código" }, valorInicial); // estrutura completa do reduce
+
+const soma = array.reduce((acc, curr) => acc + curr, 0);
 
 console.log(soma);
 
-//Somar quantidade de lançamentos de foguete de todos os países
 
-//Array de objetos
-const lancamento = [
-    { country: "Russia", launches: 12 },
-    { country: "United States", launches: 11 },
-    { country: "Brazil", launches: 2 },
-];
-
-const totalLancamentos = lancamento.reduce((elementoAnterior, item)=>{
-    return elementoAnterior + item.launches;
-}, 0);
-
-//console.log(totalLancamentos);
