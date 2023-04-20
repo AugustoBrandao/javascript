@@ -3,6 +3,9 @@
 // Quando uma promise é rejeitada: retorna uma promise rejeitada com o objeto o erro retornado pela promise que foi rejeitada.
 // Atenção ⚠️: mesmo que uma das promises seja rejeitada, os códigos das outras ainda serão executados.
 
+// função que gera número aleatório
+const generateRandomNumber = () => Math.round(Math.random() * 10);
+
 // cria uma promise que será sempre resolvida
 const generateResolvedPromise = (timer) =>
   new Promise((resolve, reject) => {

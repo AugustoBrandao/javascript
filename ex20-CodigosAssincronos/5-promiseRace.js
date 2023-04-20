@@ -3,6 +3,9 @@
 // Quando a primeira promise finalizada for rejeitada: retorna uma promise rejeitada com o objeto o erro retornado pela promise original.
 // Atenção ⚠️: mesmo que Promise.race só receba o valor da primeira promise a ser finalizada e ignore o valor das outras promises, todas as promises passadas como parâmetro serão executadas.
 
+// função que gera número aleatório
+const generateRandomNumber = () => Math.round(Math.random() * 10);
+
 // cria uma promise que será sempre resolvida
 const generateResolvedPromise = (timer) =>
   new Promise((resolve, reject) => {
