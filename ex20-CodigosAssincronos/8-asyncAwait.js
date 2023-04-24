@@ -1,6 +1,8 @@
 // Async/await são uma forma alternativa para se usar além do then
 // Async serve para mostrarmos que a função lida com código assíncrono
-// 
+// Quando colocamos o operador await no JavaScript, a execução do código é pausada até que a referida Promise seja resolvida. Isso significa que o código não será executado além daquela linha enquanto a Promise estiver pendente.
+
+
 
 const API_URL = `https://dummyjson.com/quotes/random`;
 
