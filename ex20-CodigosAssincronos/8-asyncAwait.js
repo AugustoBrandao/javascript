@@ -17,7 +17,7 @@ async function requisicaoSimplificada(url) {
         const response = await fetch(url); // await -> espera que o retorno do fetch é assíncrono
         const data = await response.json();
         console.log(data.quote);
-    } catch(error) {
+    } catch (error) {
         console.log(error.message)
     }
 }
